@@ -1,0 +1,136 @@
+body{
+	font-size: 16px;
+	text-align: center;
+}
+canvas{
+	float: left;
+	margin:15px 0 0 30px;
+}
+h3{
+	color: #00e7e3;
+	font-family: lobster;
+	font-size: 2em;
+	font-weight: lighter;
+	text-shadow: 3px 3px 2px rgba(234, 0, 255, 0.7);
+	text-align: center;
+}
+#elegirAmarillo{
+	background: yellow;
+	font-family: lobster;
+	height: 100px;
+	width: 100px;
+}
+#elegirRojo{
+	background: red;
+	font-family: lobster;
+	height: 100px;
+	width: 100px;
+}
+#jugar{
+	background:url(img/botonInicio.png);
+	font-size: 3em;
+}
+#jugarDeNuevo{
+	font-size: 1.5em;
+	margin: 2em 0 0 0 ;
+}
+#marcador{
+	float: left;
+	height: 240px;
+	margin: 0;
+	padding: 0 0 20px 0;
+	width: 300px;
+}
+#marcador input{
+	font-family: lobster;
+	font-size: 1.5em;
+	font-weight: bolder;
+	height: 50px;
+	margin:0 0 1em 0;
+	text-align: center;
+	width: 50px;
+}
+#marcador p{
+	color: white;
+	font-family: lobster;
+	font-size: 1.2em;
+	margin: 0;
+	padding: 0;
+}
+#marcadorRojo{
+	background: #ff0000;
+}
+#marcadorAmarillo{
+	background: #ffff00;
+}
+
+#panelContenedor{
+	float: left;
+	height: 650px;
+	width: 300px;
+	margin: 0 0 0 30px;
+	position: relative;
+}
+#panelFinal h2{
+	color: #e43131;
+	font-family: lobster;
+	font-size: 2.5em;
+	text-shadow: 4px 4px 2px rgba(17, 92, 255, 0.84);
+}
+#panelInicio input{
+	font-size: 1.5em;
+	border-radius: 50%;
+}
+
+.dado{
+	height: 150px;
+	margin: 0 auto;
+	width: 150px;
+}
+.cubileteAmarillo{
+	background:url(img/campeonAmarillo.png);
+}
+.cubileteRojo{
+	background:url(img/campeonRojo.png);
+}
+.oculto{
+	display: none;
+}
+.panel{
+
+	clear: both;
+	float: left;
+	height: 500px;
+	margin: 1em 0 0 0;
+	width: 300px;
+}
+.visible{
+	display: inline;
+}
+
+@media screen and (max-width: 1030px){
+	h3{
+		margin: 0;
+		padding: 10px 0 15px 0;
+		font-size: 1.7em;
+	}
+	#panelContenedor{
+		position: relative;
+		width: 650px;
+		height: 300px;
+	}
+	#marcador{
+		height: 300px;
+		position: absolute;
+		right: 0;
+		padding: 0;
+	}
+	.panel{
+		height: 300px;
+		position: absolute;
+		padding: 0;
+		margin: 0;
+		left: 0;
+		width: 350px;
+	}
+}

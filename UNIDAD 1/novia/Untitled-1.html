@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ¿ME PERDONAS?</title>
+</head>
+<body>
+    <div style="text-align: center; margin-top: 50px;">
+        <h1>¿ME PERDONARAS ALGUN DIA?</h1> 
+        <!-- estilos para los rectangulos-->
+        <div style="text-align: center; margin-top: 15%;">
+            <button id="boton-aceptar" style="background-color: #f35cd2e0; color: rgb(248, 241, 241); border-radius: 1px; padding: 2px;">¡¡ SI CLARO!!</button>
+            <button id="boton-cancelar" style="background-color: #48e950d5; color: rgb(230, 222, 222); border-radius: 1px; padding: 2px;">¡¡CLARO QUE NO!!</button>
+            
+        </div>    
+    </body>
+    <script>
+    
+        var contador = 0;
+        var botonAceptar = document.getElementById('boton-aceptar');
+        var botonCancelar = document.getElementById('boton-cancelar');
+        var botonTalvez = document.getElementById('boton-talvez');
+        //  click del botón aceptar
+        botonAceptar.addEventListener('click', function() {
+            // Redireccionamos a la página de confirmación
+            aceptar();
+        });
+        // mover el botón cancelar al poner el mouse encima
+        botonCancelar.addEventListener('mouseover', function() {
+            // Redireccionamos a la página de confirmación
+            cancelar();
+        });
+    
+        /*
+        * Mandar alerta
+        */
+        function aceptar() {
+            alert('GRACIAS');
+        }
+    
+        /*
+        * Mover el botón cancelar a cualquier lugar de la página
+        */
+        function cancelar() {
+            // -- Resolución de la pantalla 
+            let x = window.innerWidth - botonCancelar.offsetWidth;
+            let y = window.innerHeight - botonCancelar.offsetHeight;
+            // -- número aleatorio entre 0 y la resolución de la pantalla   
+            let aleatorioX = Math.floor(Math.random() * x);
+            let aleatorioY = Math.floor(Math.random() * y);
+    
+            botonCancelar.style.position = 'absolute';
+            botonCancelar.style.top = aleatorioY + 'px';
+            botonCancelar.style.left = aleatorioX + 'px';
+            // -- llamar a función de alerta
+            mostrarAlerta();
+        }
+        /*
+        * Mandar alerta
+        */
+        function mostrarAlerta() {
+            contador++;
+            if(contador == 8) {
+                alert('ANDALE DI QUE SI ME PERDONAS');
+                contador++;
+            }     
+        }
+    </script>
+    </html> 
+</body>
+</html>
