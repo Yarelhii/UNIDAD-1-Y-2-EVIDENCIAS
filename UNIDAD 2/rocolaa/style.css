@@ -1,0 +1,193 @@
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(233, 158, 217);
+    font-family: 'roboto' , sans-serif;
+
+}
+.Rocola{
+    width: 350px;
+    height: 550px;
+    border-radius: 20px;
+    background-color: rgba(233, 158, 217, 0.897);
+    box-shadow: 0 40px 100px rgba(233, 158, 217, 0.897);
+    padding: 30px;
+    overflow: hidden;
+    color: rgb(20, 20, 20);
+}
+
+.Nombre,
+.Artista{
+    text-align: center;
+    text-transform: capitalize;
+
+}
+
+.Nombre{
+    font-size: 35px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.Artista{
+   font-size: 20px;
+}
+
+.Disco{
+    position: relative;
+    display: block;
+    margin: 40px auto;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-image: url('img/persona.jpg');
+    background-size: cover;
+    box-shadow: 0 0 0 5px rgb(247, 190, 236);
+    animation: rotate 20s linear infinite;
+    animation-play-state: paused;
+}
+
+.Disco.play{
+    animation-play-state: running;
+  
+}
+
+.Disco::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 45%;
+    background: rgb(247, 190, 236);
+}
+
+.Deslizador{
+    width: 100%;
+    position: relative;
+}
+
+.Busqueda{
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    border-radius: 10px;
+    background-color: antiquewhite;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.Busqueda::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 1px;
+    height: 20px;
+    background-color: rgb(163, 132, 92);
+    box-shadow: -400px 0 0 400px rebeccapurple;
+}
+
+.Tiempo,
+.Duracion{
+    font-size: 14px;
+}
+
+.Duracion{
+    position: absolute;
+    right: 0;
+}
+
+.Controles{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.Play{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgb(235, 149, 117);
+    cursor: pointer;
+    border: rgb(235, 149, 117);
+}
+
+.Play span{
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 30px;
+    border-radius: 2px;
+    background-color: aliceblue;
+    transition: .5s;
+    clip-path: polygon(0 0, 100% 1%, 100% 100%, 0% 100%);
+}
+
+.Play span:nth-child(2){
+    left: 55%;
+    transform-origin: center;
+}
+
+.Play.pause span:nth-child(2){
+    transform: translateY(-50%) scaleY(0);
+}
+
+.Play.pause span:nth-child(1){
+    width: 35%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    border-radius: 0;
+    clip-path: polygon(0 0, 100% 50%, 100% 50%, 0% 100%);
+}
+
+.Play.pause{
+    animation: pulse 2s linear infinite;
+}
+
+@keyframes pulse{
+    0%{
+        box-shadow: 0;
+    }
+    50%{
+        box-shadow: 0 0 0 5px rgb(163, 132, 92); 
+    }
+    100%{
+        box-shadow: 0 0 0 5px rgb(221, 179, 124);
+    }
+}
+
+.Boton{
+    width: 40px;
+    height: 40px;
+    background:rgb(233, 158, 217) ;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

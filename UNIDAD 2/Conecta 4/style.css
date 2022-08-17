@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+h2{
+	color: black;
+	font-family: lobster;
+	font-size: 2em;
+	font-weight: lighter;
+	text-shadow: 3px 3px 2px lightcoral;
+    text-align: center;
+ }
+ h1{
+	color: black;
+	font-family: lobster;
+	font-size: 2em;
+	font-weight: lighter;
+	text-shadow: 3px 3px 2px lightseagreen;
+    text-align: center;
+ }
+#board {
+    height: 540px;
+    width: 630px;
+    background-color: lightcoral;
+    border: 10px solid navy;
+    
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tile {
+    height: 70px;
+    width: 70px;
+    margin: 5px;
+
+    
+    background-color: white;
+    border-radius: 50%;
+    border: 5px solid navy;
+}
+
+.azul {
+    background-color: lightblue;
+}
+
+.rosa {
+    background-color: lightpink;
+}
+
